@@ -1,12 +1,11 @@
 clear
 clc
 
-corr_g1 = permute(cell2mat(struct2cell(load('/Users/ismaila/Documents/C-Codes/SCI_GraphTheory/sci_data/SCI/fc/corr_hc.mat'))), [2 3 1]);
-corr_g2 = permute(cell2mat(struct2cell(load('/Users/ismaila/Documents/C-Codes/SCI_GraphTheory/sci_data/SCI/fc/corr_sci.mat'))), [2 3 1]);
+% corr_g1 = permute(cell2mat(struct2cell(load('/Users/ismaila/Documents/C-Codes/SCI_GraphTheory/sci_data/SCI/fc/corr_hc.mat'))), [2 3 1]);
+% corr_g2 = permute(cell2mat(struct2cell(load('/Users/ismaila/Documents/C-Codes/SCI_GraphTheory/sci_data/SCI/fc/corr_sci.mat'))), [2 3 1]);
 
-% corr_g1 = permute(cell2mat(struct2cell(load('/Users/ismaila/Documents/C-Codes/SCI_GraphTheory/sci_data/SCI/fc/corr_sci_c.mat'))), [2 3 1]);
-% corr_g2 = permute(cell2mat(struct2cell(load('/Users/ismaila/Documents/C-Codes/SCI_GraphTheory/sci_data/SCI/fc/corr_sci_t.mat'))), [2 3 1]);
-
+corr_g1 = permute(cell2mat(struct2cell(load('/Users/ismaila/Documents/C-Codes/SCI_GraphTheory/sci_data/SCI/fc/corr_sci_c.mat'))), [2 3 1]);
+corr_g2 = permute(cell2mat(struct2cell(load('/Users/ismaila/Documents/C-Codes/SCI_GraphTheory/sci_data/SCI/fc/corr_sci_t.mat'))), [2 3 1]);
 
 tic
 n = 50;
@@ -88,14 +87,26 @@ cd '/Users/ismaila/Documents/C-Codes/SCI_GraphTheory/sci_data/SCI/modularity_var
 
 % filename = sprintf('S_hc_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g1');
 % filename = sprintf('S_sci_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g2');
-filename = sprintf('Sm_hc_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g1_mode');
-filename = sprintf('Sm_sci_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g2_mode');
 % filename = sprintf('Sa_hc_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g1_avg');
 % filename = sprintf('Sa_sci_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g2_avg');
 
-
+% filename = sprintf('Sm_hc_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g1_mode');
+% filename = sprintf('Sm_sci_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g2_mode');
 % filename = sprintf('Sm_scic_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g1_mode');
 % filename = sprintf('Sm_scit_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g2_mode');
+
+% filename = sprintf('Sm_hc_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g1_temp');
+% filename = sprintf('Sm_sci_%.1f,%.1f.mat', gamma, log_omega); save(filename,'S_g1_temp');
+
+% filename = sprintf('var_s1.mat'); save(filename,'S_g1_temp');
+% filename = sprintf('var_s2.mat'); save(filename,'S_g2_temp');
+% filename = sprintf('var_s1_mode.mat'); save(filename,'S_g1_mode');
+% filename = sprintf('var_s2_mode.mat'); save(filename,'S_g2_mode');
+
+filename = sprintf('var_s1_g2.mat'); save(filename,'S_g1_temp');
+filename = sprintf('var_s2_g2.mat'); save(filename,'S_g2_temp');
+filename = sprintf('var_s1_mode_g2.mat'); save(filename,'S_g1_mode');
+filename = sprintf('var_s2_mode_g2.mat'); save(filename,'S_g2_mode');
 
 fprintf('Done!\n');
 
